@@ -2,21 +2,28 @@
 <html>
 <head>
   <title>Mini Messageboard</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <h1>Mini Messageboard</h1>
-
-  <a href="/new">Add New Message</a>
 
   <ul>
     <% messages.forEach(message => { %>
       <li>
         <strong><%= message.user %></strong><br>
         <%= message.text %><br>
-        <small><%= new Date(message.added).toLocaleString() %></small>
+        <small>
+          <%= 
+          new Date(message.added).toLocaleTimeString([], 
+          {hour: '2-digit', minute:'2-digit'}) 
+          %>
+        </small>
       </li>
-      <hr>
     <% }) %>
   </ul>
+  
+  <div class="button-container">
+    <a href="/new" class="button">Add New Message</a>
+  </div>
 </body>
 </html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>New Message</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Post a New Message</h1>
+  <form method="POST" action="/new">
+    <label for="user"><strong>Name:</strong></label>
+    <input type="text" id="user" name="messageUser" required>
+
+    <label for="text"><strong>Message:</strong></label>
+    <textarea id="text" name="messageText" required></textarea>
+
+    <div class="button-container">
+      <button type="submit" class="button">Send</button>
+    </div>
+  </form>
+</body>
+</html>
